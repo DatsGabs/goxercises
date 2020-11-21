@@ -79,13 +79,12 @@ func (p *playlist) startSong(name string) error {
 	if current.name == name {
 		p.nowPlaying = current
 		return nil
-	} else {
-		for current.next != nil {
-			current = current.next
-			if current.name == name {
-				p.nowPlaying = current
-				return nil
-			}
+	}
+	for current.next != nil {
+		current = current.next
+		if current.name == name {
+			p.nowPlaying = current
+			return nil
 		}
 	}
 
