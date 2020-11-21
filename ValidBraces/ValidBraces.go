@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 var m = map[string]string{
 	"{": "}",
 	"(": ")",
@@ -24,5 +22,5 @@ func ValidBraces(str string) bool {
 }
 
 func main() {
-	fmt.Println(ValidBraces("(){}"))
+	ValidBraces("{}{}{{(())")
 }
